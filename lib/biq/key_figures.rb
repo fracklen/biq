@@ -10,7 +10,7 @@ module Biq
       :liabilities_in_all_growth, :liquid_funds, :liquid_funds_growth,
       :report_model, :result_before_tax, :result_before_tax_growth,
       :short_term_debt, :short_term_debt_growth, :solvency_ratio,
-      :total_equity, :total_equity_growth
+      :total_equity, :total_equity_growth, :turnover, :turnover_growth
     ]
 
     attr_reader(*FIELDS)
