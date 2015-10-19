@@ -43,7 +43,7 @@ module Biq
     end
 
     def perform_search(company_name)
-      get("companies/search", name: company_name)
+      get('companies/search', name: company_name)
     end
 
     def get(resource, options = {})

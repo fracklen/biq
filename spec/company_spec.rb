@@ -24,7 +24,7 @@ describe Biq::Company do
     expect(company.address).not_to be_nil
   end
 
-  context "key figures" do
+  context 'key figures' do
     let(:key_figures) { company.key_figures }
 
     it 'has a year' do
@@ -36,7 +36,7 @@ describe Biq::Company do
     end
   end
 
-  context "address" do
+  context 'address' do
     let(:address) { company.address }
 
     it 'has a postal number' do

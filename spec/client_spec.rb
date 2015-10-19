@@ -11,7 +11,7 @@ describe Biq::Client do
 
   it 'finds Lokalebasen A/S' do
     VCR.use_cassette('lokalebasen_search') do
-      expect(client.search('Lokalebasen A/S').first.name).to eq "LOKALEBASEN.DK A/S"
+      expect(client.search('Lokalebasen A/S').first.name).to eq 'LOKALEBASEN.DK A/S'
     end
   end
 end

@@ -17,11 +17,11 @@ module Biq
 
     def parse
       return parse_embedded_results if embedded_results?
-      return nil
+      nil
     end
 
     def embedded_results?
-      data.has_key?('_embedded') && data['_embedded'].has_key?('results')
+      data.key?('_embedded') && data['_embedded'].key?('results')
     end
 
     def parse_embedded_results
@@ -36,14 +36,12 @@ module Biq
         parse_company(result)
       when 'people'
         parse_person(result)
-      else
-        nil
       end
     end
 
     def parse_company(company_data)
       return nil if CLOSED_EXCERPTS
-        .any? { |ex| company_data['excerpt'].include?(ex) }
+                    .any? { |ex| company_data['excerpt'].include?(ex) }
 
       Company.new(client.find_company(company_data['id']), client, company_data)
     end

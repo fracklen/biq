@@ -22,20 +22,20 @@ module Biq
         instance_variable_set("@#{fname}".to_sym, company_data[fname.to_s])
       end
 
-      if company_data.has_key?('_embedded')
+      if company_data.key?('_embedded')
         embedded = company_data['_embedded']
-        if embedded.has_key?('current_address')
+        if embedded.key?('current_address')
           @address = Address.new(embedded['current_address'], client)
         end
 
-        if embedded.has_key?('current_key_figures')
+        if embedded.key?('current_key_figures')
           @key_figures = KeyFigures.new(embedded['current_key_figures'])
         end
       end
     end
 
     def search_person
-      (search_data['excerpt'].split(',').last || "").strip
+      (search_data['excerpt'].split(',').last || '').strip
     end
 
     def founded_date
