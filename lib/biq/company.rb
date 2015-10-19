@@ -38,7 +38,10 @@ module Biq
       @addresses ||= client.find_company_addresses(entity_id)
     end
 
-    private
+    def trades
+      return nil unless embedded?
+      embedded['trades'].map { |trade| trade['name'] }
+    end
 
     def embedded?
       company_data.key?('_embedded')
@@ -47,6 +50,8 @@ module Biq
     def embedded
       @embedded ||= company_data['_embedded']
     end
+
+    private
 
     def set_key_figures
       return unless embedded?
