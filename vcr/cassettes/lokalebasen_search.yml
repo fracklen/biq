@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.biq.dk/api/v1/companies/search?key=<%= ENV['BIQ_API_KEY'] %>&name=Lokalebasen+A%2FS
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000, max-age=15768000; includeSubDomains; preload
+      P3P:
+      - CP="NOI CURa ADMa DEVa OUR IND COM NAV"
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"9964f69e9a11afa9608262fd3bd859a5"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - biq_session_activity=90724; path=/; expires=Mon, 19-Oct-2015 08:28:20 GMT;
+        secure, _session_id=4cfcbbf23dc65efcce488df402921be5; path=/; secure; HttpOnly,
+        request_method=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT; secure
+      X-Request-Id:
+      - f06e26fd1739ff9cbe731b134dda7382
+      X-Runtime:
+      - '0.380797'
+      Date:
+      - Mon, 19 Oct 2015 08:13:20 GMT
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger 4.0.52
+      Server:
+      - nginx/1.6.1 + Phusion Passenger 4.0.52
+    body:
+      encoding: UTF-8
+      string: '{"_links":{"curies":[{"name":"v1","href":"https://www.biq.dk:443/api/v1/docs/{rel}","templated":true}],"self":{"href":"https://www.biq.dk:443/api/v1/companies/search?page=1&key=bjVyrTGo4qhBxiYnvWRd&name=Lokalebasen+A%2FS"},"v1:simple_search":{"href":"https://www.biq.dk:443/api/v1/search{?q,page}","templated":true},"v1:addresses_search":{"href":"https://www.biq.dk:443/api/v1/addresses/search{?page,name,addr_sn,addr_hn,addr_zc,addr_mc,addr_ci,addr_co,edit_s,edit_e}","templated":true},"v1:companies_search":{"href":"https://www.biq.dk:443/api/v1/companies/search{?page,name,addr_sn,addr_hn,addr_zc,addr_mc,addr_ci,addr_co,edit_s,edit_e,cont_e,cont_p,acc_p,aoa_s,aoa_e,ar_i,ar_e,bank_i,bank_e,comp_a,comp_i,comp_s,emp_l,emp_h,kf_ar_l,kf_ar_h,kf_bs_l,kf_bs_h,kf_dfs_l,kf_dfs_h,kf_dor_l,kf_dor_h,kf_ed_l,kf_ed_h,kf_fe_l,kf_fe_h,kf_fi_l,kf_fi_h,kf_fa_l,kf_fa_h,kf_gpm_l,kf_gpm_h,kf_lia_l,kf_lia_h,kf_lf_l,kf_lf_h,kf_ltd_l,kf_ltd_h,kf_ofi_l,kf_ofi_h,kf_rbt_l,kf_rbt_h,kf_std_l,kf_std_h,kf_te_l,kf_te_h,kf_to_l,kf_to_h}","templated":true},"v1:people_search":{"href":"https://www.biq.dk:443/api/v1/people/search{?page,name,addr_sn,addr_hn,addr_zc,addr_mc,addr_ci,addr_co,edit_s,edit_e,title}","templated":true},"v1:properties_search":{"href":"https://www.biq.dk:443/api/v1/properties/search{?page,name,addr_sn,addr_hn,addr_zc,addr_mc,addr_ci,addr_co,edit_s,edit_e,ejd_fk_id,ejd_e_i,ejd_ks_l,ejd_ks_h,ejd_ev_l,ejd_ev_h,ejd_ma_l,ejd_ma_h,ejd_by_l,ejd_by_h,ejd_bo_l,ejd_bo_h,ejd_ea_l,ejd_ea_h,ejd_be_l,ejd_be_h,ejd_saa_l,ejd_saa_h}","templated":true}},"total_entries":1,"current_page":1,"total_pages":1,"_embedded":{"results":[{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/companies/1633958"}},"id":"1633958","type":"companies","name":"LOKALEBASEN.DK
+        A/S","excerpt":"CVR: 31627877, direkt\u00f8r: Jakob Dalhoff-Nielsen"}]}}'
+    http_version:
+  recorded_at: Mon, 19 Oct 2015 08:13:20 GMT
+- request:
+    method: get
+    uri: https://www.biq.dk/api/v1/companies/1633958?key=<%= ENV['BIQ_API_KEY'] %>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message:
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=31536000, max-age=15768000; includeSubDomains; preload
+      P3P:
+      - CP="NOI CURa ADMa DEVa OUR IND COM NAV"
+      X-UA-Compatible:
+      - IE=Edge
+      ETag:
+      - '"a929d116d84f57e72def264ca9c473bc"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - biq_session_activity=90724; path=/; expires=Mon, 19-Oct-2015 08:28:21 GMT;
+        secure, _session_id=0f4094056564df655555b3859a6b50f0; path=/; secure; HttpOnly,
+        request_method=; path=/; expires=Thu, 01-Jan-1970 00:00:00 GMT; secure
+      X-Request-Id:
+      - f750a3f26bbb7f0ebdb27c7d5bdaaae0
+      X-Runtime:
+      - '0.287550'
+      Date:
+      - Mon, 19 Oct 2015 08:13:21 GMT
+      X-Rack-Cache:
+      - miss
+      X-Powered-By:
+      - Phusion Passenger 4.0.52
+      Server:
+      - nginx/1.6.1 + Phusion Passenger 4.0.52
+    body:
+      encoding: UTF-8
+      string: '{"_links":{"curies":[{"name":"v1","href":"https://www.biq.dk:443/api/v1/docs/{rel}","templated":true}],"self":{"href":"https://www.biq.dk:443/api/v1/companies/1633958"},"v1:relations":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/relations"},"v1:key_figures":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/key_figures"},"v1:statuses":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/statuses"},"v1:addresses":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/addresses"},"v1:property_relations":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/property_relations"},"v1:audit_remarks":{"href":"https://www.biq.dk:443/api/v1/companies/1633958/audit_remarks"},"v1:simplesearch":{"href":"https://www.biq.dk:443/api/v1/search{?q,page}","templated":true},"v1:search":{"href":"https://www.biq.dk:443/api/v1/companies/search{?page,name,addr_sn,addr_hn,addr_zc,addr_mc,addr_ci,addr_co,edit_s,edit_e,cont_e,cont_p,acc_p,aoa_s,aoa_e,ar_i,ar_e,bank_i,bank_e,comp_a,comp_i,comp_s,emp_l,emp_h,kf_ar_l,kf_ar_h,kf_bs_l,kf_bs_h,kf_dfs_l,kf_dfs_h,kf_dor_l,kf_dor_h,kf_ed_l,kf_ed_h,kf_fe_l,kf_fe_h,kf_fi_l,kf_fi_h,kf_fa_l,kf_fa_h,kf_gpm_l,kf_gpm_h,kf_lia_l,kf_lia_h,kf_lf_l,kf_lf_h,kf_ltd_l,kf_ltd_h,kf_ofi_l,kf_ofi_h,kf_rbt_l,kf_rbt_h,kf_std_l,kf_std_h,kf_te_l,kf_te_h,kf_to_l,kf_to_h}","templated":true}},"type":"companies","id":492866,"name":"LOKALEBASEN.DK
+        A/S","entity_id":1633958,"status":"A/S","cvr":"31627877","website":"","fiscal_year_starts_on":"2010-01-01","fiscal_year_ends_on":"2010-12-31","capital_status_amount":500000.0,"capital_status_currency":"kr.
+        ","signatories":"Selskabet tegnes af den samlede bestyrelse eller af en direkt\u00f8r.","last_financial_report_delivered_on":"2015-04-15","owner_value_sum":"100.0","old_min_employees":0,"old_max_employees":0,"protected_from_advertising":true,"last_article_of_association_found_on":"2015-08-31","_embedded":{"current_address":{"_links":{"residents":{"href":"https://www.biq.dk:443/api/v1/addresses/search?addr_sn=\u00c6bel\u00f8gade&addr_hn=4&addr_zc=2100&"}},"can_not_geocode":false,"city":"K\u00f8benhavn
+        \u00d8","coordinate_source_id":2,"country":"Danmark","created_at":"2014-06-30T14:48:58+02:00","entity_id":1633958,"floor":"1","house_number":"4","house_number_from":4,"housenumber_parseable":true,"id":11905508,"latitude":"55.71112679855793","longitude":"12.56445674131872","municipality":"K\u00f8benhavn","municipal_code":101,"normalized_street_name":"beloegade","po_box":"","postnummer":2100,"postby":"K\u00f8benhavn
+        \u00d8","street_name":"\u00c6bel\u00f8gade","street_code":8500,"streetname_parseable":true,"update_coordinates":false,"updated_at":"2014-07-03T04:23:22+02:00","verified_at":"2014-06-27T02:00:00+02:00"},"current_key_figures":{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/key_figures/1982203"},"company":{"href":"https://www.biq.dk:443/api/v1/companies/492866"}},"id":1982203,"company_id":492866,"created_at":"2015-05-04T10:27:17+02:00","updated_at":"2015-05-05T12:07:49+02:00","year":"2014","annual_result":1364000,"annual_result_growth":281,"balance_sheet":4959000,"balance_sheet_growth":-8,"depreciation_financial_statement":-1233000,"depreciation_financial_statement_growth":27,"financial_expenses":-33000,"financial_expenses_growth":-450,"financial_statement_enddate":"2014-12-31","financial_statement_startdate":"2014-01-01","financing_income":54000,"financing_income_growth":59,"fixed_assets":3207000,"fixed_assets_growth":53,"gross_profit_margin":4690000,"gross_profit_margin_growth":246,"growth_factor":"1.0","liabilities_in_all":4958000,"liabilities_in_all_growth":-8,"liquid_funds":7000,"liquid_funds_growth":-56,"other_financial_income":0,"report_model":"Nor","result_before_tax":1773000,"result_before_tax_growth":277,"return_on_equity":52,"short_term_debt":1804000,"short_term_debt_growth":-54,"solvency_ratio":53,"total_equity":2630000,"total_equity_growth":108},"trades":[{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/trades/1871"}},"id":1871,"code":"620200","name":"Konsulentbistand
+        vedr\u00f8rende informationsteknologi"}],"current_relations":[{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/people/421977"}},"id":421977,"type":"people","relation_type":"boarddirector","name":"Jakob
+        Dalhoff-Nielsen"},{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/people/421977"}},"id":421977,"type":"people","relation_type":"boardmember","name":"Jakob
+        Dalhoff-Nielsen"},{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/people/516750"}},"id":516750,"type":"people","relation_type":"boardmember","name":"Lars
+        Heilesen"},{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/people/1015485"}},"id":1015485,"type":"people","relation_type":"boardmember","name":"Thomas
+        F\u00e6rch"},{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/people/1273489"}},"id":1273489,"type":"people","relation_type":"founded","name":"Martin
+        Frank Poulsen"},{"_links":{"self":{"href":"https://www.biq.dk:443/api/v1/companies/82491"}},"id":82491,"type":"companies","relation_type":"accountant","name":"PKF
+        MUNKEBO VINDELEV, STATSAUTORISERET REVISIONSAKTIESELSKAB"}]},"total_current_relations":6,"current_page":1,"total_pages":1}'
+    http_version:
+  recorded_at: Mon, 19 Oct 2015 08:13:21 GMT
+recorded_with: VCR 2.9.3
