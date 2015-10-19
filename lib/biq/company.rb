@@ -11,27 +11,19 @@ module Biq
       :last_article_of_association_found_on
     ]
 
-    attr_reader *FIELDS
+    attr_reader(*FIELDS)
 
-    attr_reader :key_figures, :address, :client, :search_data
+    attr_reader :key_figures, :address, :client, :search_data, :company_data
 
     def initialize(company_data, client, search_data)
       @client = client
       @search_data = search_data
+      @company_data = company_data
       FIELDS.each do |fname|
         instance_variable_set("@#{fname}".to_sym, company_data[fname.to_s])
       end
-
-      if company_data.key?('_embedded')
-        embedded = company_data['_embedded']
-        if embedded.key?('current_address')
-          @address = Address.new(embedded['current_address'], client)
-        end
-
-        if embedded.key?('current_key_figures')
-          @key_figures = KeyFigures.new(embedded['current_key_figures'])
-        end
-      end
+      set_address
+      set_key_figures
     end
 
     def search_person
@@ -44,6 +36,28 @@ module Biq
 
     def address_history
       @addresses ||= client.find_company_addresses(entity_id)
+    end
+
+    private
+
+    def embedded?
+      company_data.key?('_embedded')
+    end
+
+    def embedded
+      @embedded ||= company_data['_embedded']
+    end
+
+    def set_key_figures
+      return unless embedded?
+      return unless embedded.key?('current_key_figures')
+      @key_figures = KeyFigures.new(embedded['current_key_figures'])
+    end
+
+    def set_address
+      return unless embedded?
+      return unless embedded.key?('current_address')
+      @address = Address.new(embedded['current_address'], client)
     end
   end
 end

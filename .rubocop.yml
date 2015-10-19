@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - Rakefile
+    - vcr/**/*
+    - biq.gemspec
+Style/Documentation:
+  Enabled: false

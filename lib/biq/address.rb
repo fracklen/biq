@@ -9,7 +9,7 @@ module Biq
       :streetname_parseable, :updated_at, :verified_at, :ended_on
     ]
 
-    attr_reader *FIELDS
+    attr_reader(*FIELDS)
     attr_reader :client
 
     def initialize(address_data, client)

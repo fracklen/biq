@@ -13,7 +13,7 @@ module Biq
       :total_equity, :total_equity_growth
     ]
 
-    attr_reader *FIELDS
+    attr_reader(*FIELDS)
 
     def initialize(key_data)
       FIELDS.each do |fname|
